@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<web-app  
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"  
+    version="2.5">  
+    <servlet>  
+        <servlet-name>login</servlet-name>  
+        <servlet-class>com.amzi.servlets.LoginServlet</servlet-class>  
+    </servlet>  
+    <servlet>  
+        <servlet-name>report</servlet-name>  
+        <servlet-class>com.amzi.servlets.CreateComplainServlet</servlet-class>  
+    </servlet>
+    <servlet>  
+        <servlet-name>reportAnon</servlet-name>  
+        <servlet-class>com.amzi.servlets.CreateAnonymousComplainServlet</servlet-class>  
+    </servlet> 
+    <servlet>  
+        <servlet-name>complaint</servlet-name>  
+        <servlet-class>com.amzi.servlets.SubmitReportServlet</servlet-class>  
+    </servlet>
+    <servlet>  
+        <servlet-name>gotoSignUp</servlet-name>  
+        <servlet-class>com.amzi.servlets.SignUpPageServlet</servlet-class>  
+    </servlet>
+    <servlet>  
+        <servlet-name>signUp</servlet-name>  
+        <servlet-class>com.amzi.servlets.SignUpServlet</servlet-class>  
+    </servlet>
+  
+    <servlet-mapping>  
+        <servlet-name>login</servlet-name>  
+        <url-pattern>/loginServlet</url-pattern>  
+    </servlet-mapping>  
+    <servlet-mapping>  
+        <servlet-name>report</servlet-name>  
+        <url-pattern>/createReport</url-pattern>  
+    </servlet-mapping>  
+    <servlet-mapping>  
+        <servlet-name>reportAnon</servlet-name>  
+        <url-pattern>/createReportAnon</url-pattern>  
+    </servlet-mapping> 
+    <servlet-mapping>  
+        <servlet-name>complaint</servlet-name>  
+        <url-pattern>/complaintSevlet</url-pattern>  
+    </servlet-mapping>
+    <servlet-mapping>  
+        <servlet-name>gotoSignUp</servlet-name>  
+        <url-pattern>/signUpPage</url-pattern>  
+    </servlet-mapping>
+    <servlet-mapping>  
+        <servlet-name>signUp</servlet-name>  
+        <url-pattern>/signUpServlet</url-pattern>  
+    </servlet-mapping>
+  
+  
+    <welcome-file-list>  
+        <welcome-file>index.jsp</welcome-file>  
+    </welcome-file-list>  
+</web-app>
